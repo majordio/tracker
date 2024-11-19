@@ -47,7 +47,7 @@ services:
             context: ..
             dockerfile: ./docker/Dockerfile
         ports:
-            - "443:80"
+            - "443:443"
             - "8091:8091"
         expose:
             - "443"
