@@ -19,6 +19,8 @@ services:
             test: mysqladmin ping -h localhost --password=root
             interval: 15s
             retries: 15
+        ports:
+            - "3306:3306"
         expose:
             - "3306"
 
@@ -47,7 +49,7 @@ services:
             context: ..
             dockerfile: ./docker/Dockerfile
         ports:
-            - "443:443"
+            - "80:80"
             - "8091:8091"
         expose:
             - "443"
