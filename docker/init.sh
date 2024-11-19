@@ -18,5 +18,5 @@ while true; do
 
     install -d $(dirname "$LOG")
 
-    php artisan serve --host=0.0.0.0 --port=80 --no-reload >> "$LOG" 2>&1
+    php artisan serve --host=0.0.0.0 --port=443 --no-reload >> "$LOG" 2>&1
 done
