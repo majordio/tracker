@@ -21,8 +21,8 @@ L.GeometryUtil = GeometryUtil;
         return
     }
 
-    latitude.value = latitude.value || 40.416729;
-    longitude.value = longitude.value || -3.703339;
+    latitude.value = latitude.value || 8.150000;
+    longitude.value = longitude.value || 123.849998;
     radius.value = radius.value || 5;
 
     let circle;

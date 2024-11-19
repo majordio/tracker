@@ -20,8 +20,8 @@ L.GeometryUtil = GeometryUtil;
         return;
     }
 
-    const latitude = element.dataset.mapPolygonLatitude || 40.416729;
-    const longitude = element.dataset.mapPolygonLongitude || -3.703339;
+    const latitude = element.dataset.mapPolygonLatitude || 8.150000;
+    const longitude = element.dataset.mapPolygonLongitude || 123.849998;
 
    const layers = Map.getControlLayers();
 

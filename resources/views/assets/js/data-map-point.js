@@ -22,8 +22,8 @@ L.GeometryUtil = GeometryUtil;
 
     const zoom = parseInt(element.dataset.mapPointZoom || 13);
 
-    latitude.value = latitude.value || 40.416729;
-    longitude.value = longitude.value || -3.703339;
+    latitude.value = latitude.value || 8.150000;
+    longitude.value = longitude.value || 123.849998;
 
     let marker;
 
