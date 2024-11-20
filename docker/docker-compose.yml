@@ -6,7 +6,7 @@ services:
         volumes:
             - ./../storage/docker/db:/var/lib/mysql
         environment:
-            - MYSQL_ROOT_PASSWORD=gpstracker
+            - MYSQL_ROOT_PASSWORD=spacebar
             - MYSQL_USER=gpstracker
             - MYSQL_PASSWORD=gpstracker
             - MYSQL_DATABASE=gpstracker
@@ -16,7 +16,7 @@ services:
         networks:
             - gpstracker-network
         healthcheck:
-            test: mysqladmin ping -h localhost --password=gpstracker
+            test: mysqladmin ping -h localhost --password=spacebar
             interval: 15s
             retries: 15
         ports:
