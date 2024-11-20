@@ -51,9 +51,13 @@ services:
         ports:
             - "80:80"
             - "8091:8091"
+            - "8080:8080"
+            - "5050:5050"
         expose:
             - "80"
             - "8091"
+            - "8080"
+            - "5050"
         networks:
             - gpstracker-network
         tty: true
