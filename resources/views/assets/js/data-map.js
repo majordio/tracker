@@ -223,4 +223,6 @@ import Map from './map';
             + ':' + ('00' + Math.floor(seconds / 60 % 60)).slice(-2)
             + ':' + ('00' + Math.floor(seconds % 60)).slice(-2);
     };
+
+    liveStart();
 })();
