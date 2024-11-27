@@ -143,7 +143,24 @@ import { dateUtc, dateToIso } from './helper'
         });
     };
 
+    const liveStop = function () {
+        clearInterval(interval);
+
+        interval = null;
+
+        Feather(live, 'play')
+    };
+
+    const liveStart = function () {
+        update();
+
+        interval = setInterval(update, 10000);
+
+        Feather(live, 'pause')
+    };
+
     filterListener();
+    liveStart();
 
     map.setDevices(devices);
 
@@ -179,19 +196,5 @@ import { dateUtc, dateToIso } from './helper'
         });
     }
 
-    const liveStop = function () {
-        clearInterval(interval);
-
-        interval = null;
-
-        Feather(live, 'play')
-    };
-
-    const liveStart = function () {
-        update();
-
-        interval = setInterval(update, 10000);
-
-        Feather(live, 'pause')
-    };
+   
 })();
