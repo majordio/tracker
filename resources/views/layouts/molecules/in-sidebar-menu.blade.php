@@ -1,7 +1,14 @@
 <li>
-    <a href="{{ route('dashboard.index') }}" class="side-menu {{ str_starts_with($ROUTE, 'dashboard.') ? 'side-menu--active' : '' }}">
+    <a href="{{ route('dash.main') }}" class="side-menu {{ str_starts_with($ROUTE, 'dash.') ? 'side-menu--active' : '' }}">
         <div class="side-menu__icon">@icon('home')</div>
         <div class="side-menu__title">{{ __('in-sidebar.dashboard') }}</div>
+    </a>
+</li>
+
+<li>
+    <a href="{{ route('dashboard.index').'?vehicle_id=' }}" class="side-menu {{ $ROUTE == 'dashboard.index' ? 'side-menu--active' : '' }}">
+        <div class="side-menu__icon">@icon('clipboard')</div>
+        <div class="side-menu__title">God Mode</div>
     </a>
 </li>
 
