@@ -12,9 +12,11 @@
 
         @endif
 
+        @if ($ROUTE != 'dashboard.index')
         <div class="flex-grow mt-2 lg:mt-0">
             <x-select name="vehicle_id" :options="$vehicles" value="id" text="name" placeholder="{{ __('device-map-index.vehicle') }}" data-change-submit></x-select>
         </div>
+        @endif
     </div>
 </form>
 
