@@ -15,6 +15,7 @@ import Storage from './storage';
 import feather from './feather';
 import value2color from './value2color';
 import number2color from './number2color';
+import moment from 'moment'
 
 export default class {
     constructor(element) {
@@ -645,19 +646,25 @@ export default class {
 
     getDeviceTooltipTitle(device) {
         let title = device.name;
-
+    
         if (device.vehicle) {
-            if (device.name !== device.vehicle.name) {
-                title += '<br />' + device.vehicle.name;
-            }
-
-            if (device.vehicle.plate && device.vehicle.plate.length) {
-                title += '<br />' + device.vehicle.plate;
+            // if (device.name !== device.vehicle.name) {
+            //     title += '<br />' + device.vehicle.name;
+            // }
+    
+            // if (device.vehicle.plate && device.vehicle.plate.length) {
+            //     title += '<br />' + device.vehicle.plate;
+            // }
+    
+            if (device.position.date_at && device.position.date_at.length) {
+                const formattedDate = moment(device.position.date_at).fromNow();
+                title += '<br />' + formattedDate;
             }
         }
-
+    
         return title;
     }
+    
 
     getDeviceTooltipOptions(device) {
         return {
